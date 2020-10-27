@@ -1,0 +1,114 @@
+*,
+::after,
+::before {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+/*
+ ***************************************
+*/
+.main__imagen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.titulo-h1 {
+  margin: 20px 0;
+  text-align: center; }
+
+.imagen__contenedor {
+  margin-bottom: 25px;
+  width: 80%;
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.imagen__view {
+  width: 60%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .imagen__view .imagen__view-img {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 5px black; }
+
+.imagen__iditar {
+  width: 40%;
+  height: 100%; }
+  .imagen__iditar span {
+    margin: 0 5px; }
+
+.imagen__galeria {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.imagen__galeria-ind {
+  width: 220px;
+  height: 300px;
+  margin: 20px 1%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 5px black; }
+  .imagen__galeria-ind .imagen__galeria-img {
+    z-index: 5;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: solid 5px white;
+    transform: scale(1);
+    transition: all 1s; }
+    .imagen__galeria-ind .imagen__galeria-img:hover {
+      transform: scale(1.2); }
+  .imagen__galeria-ind::after, .imagen__galeria-ind::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    background-color: #0099ff;
+    z-index: 10;
+    transition: all 1s; }
+  .imagen__galeria-ind::after {
+    top: 0;
+    width: 5px;
+    height: 0%;
+    box-shadow: 215px 300px #0099ff; }
+  .imagen__galeria-ind::before {
+    bottom: 0;
+    width: 0%;
+    height: 5px;
+    box-shadow: 220px -295px #0099ff; }
+  .imagen__galeria-ind:hover::after {
+    height: 100%;
+    box-shadow: 215px 0px #0099ff; }
+  .imagen__galeria-ind:hover::before {
+    width: 100%;
+    box-shadow: 0px -295px #0099ff; }
+
+.img_selecionada {
+  border: solid 5px #0099ff !important; }
+
+/*# sourceMappingURL=style.css.map */
